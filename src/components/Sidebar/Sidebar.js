@@ -4,6 +4,7 @@ import AddIcon from "@material-ui/icons/Add";
 import SidebarChannel from "./SidebarChannel/SidebarChannel";
 import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import CallIcon from "@material-ui/icons/Call";
 import MicIcon from "@material-ui/icons/Mic";
 import HeadsetIcon from "@material-ui/icons/Headset";
@@ -42,8 +43,8 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <h3>Titanium</h3>
-        <ExpandMoreIcon />
+        <h3>Educational Chatting Room</h3>
+        <ExitToAppIcon className="sign_out" onClick={() => auth.signOut()} />
       </div>
 
       <div className="sidebar__channels">
@@ -79,19 +80,15 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar
-          src={user.photo}
-          onClick={() => auth.signOut()}
-          style={{ cursor: "pointer" }}
-        />
+        <Avatar src={user.photo} />
         <div className="sidebar__profileInfo">
           <h3>{user.displayName}</h3>
           <p>#{user.uid.substring(0, 5)}</p>
         </div>
         <div className="sidebar__icon">
-          <MicIcon />
-          <HeadsetIcon />
-          <SettingsIcon />
+          <MicIcon className="icons_hover" />
+          <HeadsetIcon className="icons_hover" />
+          <SettingsIcon className="icons_hover" />
         </div>
       </div>
     </div>

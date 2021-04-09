@@ -58,7 +58,7 @@ const Chat = () => {
           ))}
       </div>
       <div className="chat__input">
-        <AddCircleIcon fontSize="large" />
+        <AddCircleIcon className="icons_hover" fontSize="large" />
         <form>
           <input
             value={input}
@@ -78,9 +78,9 @@ const Chat = () => {
         </form>
 
         <div className="chat__inputIcons">
-          <CardGiftcardIcon />
-          <GifIcon />
-          <EmojiEmotionsIcon />
+          <CardGiftcardIcon className="icons_hover" />
+          <GifIcon className="icons_hover" />
+          <EmojiEmotionsIcon className="icons_hover" />
         </div>
       </div>
     </div>
